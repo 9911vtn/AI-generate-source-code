@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>เรียนรู้ AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #aiButton {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        #dateTime {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>เรียนรู้ AI</h1>
+        <button id="aiButton">Request</button>
+    </div>
+    <div id="dateTime"></div>
+
+    <script>
+        // JavaScript เพื่อแสดงวันที่และเวลาปัจจุบัน
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeElement = document.getElementById("dateTime");
+            dateTimeElement.textContent = `วันที่และเวลาปัจจุบัน: ${now.toLocaleString()}`;
+        }
+
+        // เรียกใช้งานฟังก์ชัน updateDateTime เพื่อแสดงวันที่และเวลาปัจจุบันทุกวินาที
+        setInterval(updateDateTime, 1000);
+
+        // JavaScript เพื่อการคลิกปุ่ม
+        const aiButton = document.getElementById("aiButton");
+        aiButton.addEventListener("click", function() {
+            // เพิ่มโค้ดที่คุณต้องการให้ปุ่ม request ทำงานที่นี่
+            alert("คุณกำลังทำรายการ request แล้ว!");
+        });
+    </script>
+</body>
+</html>
